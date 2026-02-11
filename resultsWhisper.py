@@ -5,7 +5,11 @@ import psutil
 import gc
 
 whisperModels = [
-    "NBAiLab/nb-whisper-tiny"
+    "NBAiLab/nb-whisper-tiny",
+    "NBAiLab/nb-whisper-base",
+    "NBAiLab/nb-whisper-small",
+    "NBAiLab/nb-whisper-medium",
+    "NBAiLab/nb-whisper-large"
 
 ]
 
@@ -14,7 +18,7 @@ audioFile = "king.mp3"
 for model in whisperModels:
 
 
-    # RAM used before test
+    # RAM used before 
     gc.collect()
     ramStart = psutil.virtual_memory().used /  (1024*3)
 
@@ -25,8 +29,17 @@ for model in whisperModels:
     loadEnd = time.time()
     loadTime = loadEnd - loadStart
 
+    # RAM used after 
+    ramEnd = psutil.virtual_memory().used /(1024*3)
+    ramUsed = ramEnd-ramStart
 
-print(loadTime)
+    # Transcribe 
+
+    transcribe = asr("king.mp3", chunk_length_s=28, return_timestamps=True, generate_kwargs={'num_beams': 5, 'task': 'transcribe', 'language': 'no'})
+
+
+
+print(transcribe)
 
 
 
