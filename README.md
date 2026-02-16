@@ -11,7 +11,7 @@ pip uninstall -y torch torchvision torchaudio
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 pip install transformers psutil
 
-Insall ffmpeg
+Install ffmpeg
 
 winget install Gyan.FFmpeg
 
