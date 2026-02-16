@@ -1,17 +1,28 @@
-# HuggingFace pipeline, time utilities, psutil system/process info and gc garbage collector
-import time, os, gc, warnings, argparse, threading, subprocess
-import psutil
-from transformers import pipeline
+                                                                                                            import argparse
+import os
+import subprocess
+import threading
+import time
 
+import psutil
+
+try:
+    from faster_whisper import WhisperModel
+
+    FASTER_OK = True
+except Exception:
+    FASTER_OK = False
 
 try:
     import torch
-    TORCH_OK =True
+
+    TORCH_OK = True
 except Exception:
-    TORCH_OK =False
+    TORCH_OK = False
+
 
 def convertToGiB(b):
-    return (b/(1024**3))
+    return b / (1024**3)
 
 
 class GPUSampler:
@@ -85,52 +96,45 @@ class GPUSampler:
         }
 
 
-def transcribe(model, audio, device):
-
+def transcribe(model, audio, device, gpu_index, compute_type, language, beam_size):
     sysRes = psutil.Process(os.getpid())
-
     baselineRam = sysRes.memory_info().rss
 
-    if TORCH_OK and device != -1 and torch.cuda.is_available():
-        torch.cuda.reset_peak_memory_stats()
-        torch.cuda.empty_cache()
-
-    # Loading model
     load0 = time.time()
-    asr = pipeline("automatic-speech-recognition", model=model, device=device)
+    asr = WhisperModel(
+        model_size_or_path=model,
+        device=device,
+        device_index=gpu_index,
+        compute_type=compute_type,
+    )
     loadTime = time.time() - load0
     ramAfterLoad = sysRes.memory_info().rss
 
-    # Transcribe
     transcribeTime0 = time.time()
-    cpu= time.process_time()
+    cpu = time.process_time()
     gpu_sampler = None
-    if TORCH_OK and device != -1 and torch.cuda.is_available():
-        gpu_sampler = GPUSampler(gpu_index=device)
+    if device == "cuda":
+        gpu_sampler = GPUSampler(gpu_index=gpu_index)
         gpu_sampler.start()
 
     try:
-        results = asr(audio,return_timestamps=True,generate_kwargs={"num_beams": 1, "task": "transcribe", "language": "no"},)
+        segments, _info = asr.transcribe(
+            audio,
+            beam_size=beam_size,
+            task="transcribe",
+            language=language,
+        )
+        text = "".join(seg.text for seg in segments).strip()
     finally:
         if gpu_sampler is not None:
             gpu_sampler.stop()
 
     runTime = time.time() - transcribeTime0
-    
     cpuTime = time.process_time() - cpu
 
-    # CPU Usage in % 
+    avgCPUUsage = (cpuTime / runTime) * 100.0 if runTime > 0 else 0.0
+    ramUsed = sysRes.memory_info().rss
 
-    avgCPUUSage = (cpuTime/runTime) * 100.0
-
-   
-
-    ramUsed= sysRes.memory_info().rss
-
-    peakVRAM = None
-    if TORCH_OK and device != -1 and torch.cuda.is_available():
-        peakVRAM = convertToGiB(torch.cuda.max_memory_allocated())
-        torch.cuda.empty_cache()
     gpuStats = gpu_sampler.summary() if gpu_sampler is not None else {
         "gpuUtilAvg": None,
         "gpuUtilMax": None,
@@ -139,52 +143,76 @@ def transcribe(model, audio, device):
         "gpuSamples": 0,
         "gpuSamplerError": None,
     }
+    vramPeak = None
+    if gpuStats["gpuMemMaxMiB"] is not None:
+        vramPeak = gpuStats["gpuMemMaxMiB"] / 1024.0
 
     return {
-        "text": results["text"],
+        "text": text,
         "loadTime": loadTime,
-        "runTime" : runTime,
-        "avgCPU" : avgCPUUSage,
+        "runTime": runTime,
+        "avgCPU": avgCPUUsage,
         "ramLoad": convertToGiB(ramAfterLoad - baselineRam),
-        "ramAfterTranscribe" : convertToGiB(ramUsed-ramAfterLoad),
-        "vramPeak": peakVRAM,
+        "ramAfterTranscribe": convertToGiB(ramUsed - ramAfterLoad),
+        "vramPeak": vramPeak,
         "gpuUtilAvg": gpuStats["gpuUtilAvg"],
         "gpuUtilMax": gpuStats["gpuUtilMax"],
         "gpuMemMaxMiB": gpuStats["gpuMemMaxMiB"],
         "gpuPowerMaxW": gpuStats["gpuPowerMaxW"],
         "gpuSamples": gpuStats["gpuSamples"],
         "gpuSamplerError": gpuStats["gpuSamplerError"],
-
     }
 
 
-# This part is AI generated
 if __name__ == "__main__":
-
-
-    parser = argparse.ArgumentParser(description="Quick test runner")
+    parser = argparse.ArgumentParser(description="Faster-Whisper benchmark runner")
     parser.add_argument("audio_file", type=str, help="Path to audio file (wav/mp3/etc)")
-    parser.add_argument("--model", type=str, default="NbAiLab/nb-whisper-small", help="HF model id")
+    parser.add_argument("--model", type=str, default="large-v3", help="faster-whisper model id")
     parser.add_argument("--device", choices=["cpu", "gpu"], default="cpu", help="Run on CPU or GPU")
     parser.add_argument("--gpu_index", type=int, default=0, help="CUDA GPU index (0 = first GPU)")
+    parser.add_argument(
+        "--compute_type",
+        type=str,
+        default="float16",
+        help="faster-whisper compute type (e.g. float16, int8_float16, int8)",
+    )
+    parser.add_argument("--language", type=str, default="no", help="Language code")
+    parser.add_argument("--beam_size", type=int, default=1, help="Beam size")
     args = parser.parse_args()
 
-    # Pick device id for transformers pipeline
+    if not FASTER_OK:
+        print("ERROR: faster-whisper is not installed.")
+        print("Install with: python -m pip install faster-whisper")
+        raise SystemExit(2)
+
     if args.device == "cpu":
-        device_id = -1
-    else:
-        if not (TORCH_OK and torch.cuda.is_available()):
-            print("GPU requested, but CUDA is not available. Falling back to CPU.")
-            device_id = -1
+        device_id = "cpu"
+        if args.compute_type == "float16":
+            compute_type = "int8"
         else:
-            device_id = args.gpu_index
+            compute_type = args.compute_type
+    else:
+        if TORCH_OK and not torch.cuda.is_available():
+            print("GPU requested, but CUDA is not available. Falling back to CPU.")
+            device_id = "cpu"
+            compute_type = "int8"
+        else:
+            device_id = "cuda"
+            compute_type = args.compute_type
 
-    # Run
-    out = transcribe(args.model, args.audio_file, device_id)
+    out = transcribe(
+        model=args.model,
+        audio=args.audio_file,
+        device=device_id,
+        gpu_index=args.gpu_index,
+        compute_type=compute_type,
+        language=args.language,
+        beam_size=args.beam_size,
+    )
 
-    # Print results
     print(f"\nModel: {args.model}")
-    print(f"Device: {'CPU' if device_id == -1 else f'GPU:{device_id}'}")
+    print(f"Device: {'CPU' if device_id == 'cpu' else f'GPU:{args.gpu_index}'}")
+    print(f"Compute type: {compute_type}")
     print(f"Load time: {out['loadTime']:.2f}s")
     print(f"Transcribe time: {out['runTime']:.2f}s")
     print(f"Avg CPU% during transcribe: {out['avgCPU']:.1f}%")

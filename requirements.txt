@@ -1,0 +1,13 @@
+# Base deps. For GPU, reinstall torch/torchvision/torchaudio from the
+# PyTorch selector (https://pytorch.org/get-started/locally/) so the
+# wheel matches your exact GPU architecture.
+torch
+torchvision
+torchaudio
+psutil
+transformers
+openai-whisper
+faster-whisper
+numpy
+scipy
+soundfile
