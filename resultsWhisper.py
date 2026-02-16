@@ -63,12 +63,10 @@ def transcribe(model, audio, device):
 
     }
 
+
+# This part is AI generated
 if __name__ == "__main__":
 
-  
-    # FIX: your code below still has torch.cude -> torch.cuda.
-    # Easiest: change that line inside transcribe() to torch.cuda (or remove it).
-    # For now, this main will run CPU by default and can run GPU if available.
 
     parser = argparse.ArgumentParser(description="Quick test runner")
     parser.add_argument("audio_file", type=str, help="Path to audio file (wav/mp3/etc)")
