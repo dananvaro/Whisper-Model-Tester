@@ -1,0 +1,453 @@
+Performance summary
+===================
+
+Backend: hf
+-----------
+
+Model: openai/whisper-tiny
+--------------------------
+Backend: hf
+Repeats: 10
+Successful runs: 10/10
+Exit code: 0
+Transcribe runs (s): 1.35, 1.33, 1.34, 1.34, 1.35, 1.34, 1.35, 1.35, 1.35, 1.35
+Transcribe time: 1.35s
+Transcribe p95: 1.35s
+Transcribe min/max: 1.33s / 1.35s
+Device: GPU:0
+Load time: 2.05s
+Avg CPU% during transcribe: 202.4%
+RAM used by load: 0.142 GiB
+RAM used by transcribe: 0.827 GiB
+VRAM peak: 0.18007946014404297
+GPU util avg/max: 22.1% / 44.0%
+GPU power max: 65.0 W
+GPU memory max (nvidia-smi): 1820 MiB
+Full output: raw_logs\hf_openai_whisper-tiny_run01.log
+Full output: raw_logs\hf_openai_whisper-tiny_run02.log
+Full output: raw_logs\hf_openai_whisper-tiny_run03.log
+Full output: raw_logs\hf_openai_whisper-tiny_run04.log
+Full output: raw_logs\hf_openai_whisper-tiny_run05.log
+Full output: raw_logs\hf_openai_whisper-tiny_run06.log
+Full output: raw_logs\hf_openai_whisper-tiny_run07.log
+Full output: raw_logs\hf_openai_whisper-tiny_run08.log
+Full output: raw_logs\hf_openai_whisper-tiny_run09.log
+Full output: raw_logs\hf_openai_whisper-tiny_run10.log
+
+Model: openai/whisper-small
+---------------------------
+Backend: hf
+Repeats: 10
+Successful runs: 10/10
+Exit code: 0
+Transcribe runs (s): 2.17, 2.13, 2.16, 2.20, 2.15, 2.15, 2.16, 2.18, 2.19, 2.16
+Transcribe time: 2.16s
+Transcribe p95: 2.20s
+Transcribe min/max: 2.13s / 2.20s
+Device: GPU:0
+Load time: 2.42s
+Avg CPU% during transcribe: 163.5%
+RAM used by load: 0.150 GiB
+RAM used by transcribe: 0.800 GiB
+VRAM peak: 1.030942440032959
+GPU util avg/max: 41.9% / 61.0%
+GPU power max: 92.8 W
+GPU memory max (nvidia-smi): 2762 MiB
+Full output: raw_logs\hf_openai_whisper-small_run01.log
+Full output: raw_logs\hf_openai_whisper-small_run02.log
+Full output: raw_logs\hf_openai_whisper-small_run03.log
+Full output: raw_logs\hf_openai_whisper-small_run04.log
+Full output: raw_logs\hf_openai_whisper-small_run05.log
+Full output: raw_logs\hf_openai_whisper-small_run06.log
+Full output: raw_logs\hf_openai_whisper-small_run07.log
+Full output: raw_logs\hf_openai_whisper-small_run08.log
+Full output: raw_logs\hf_openai_whisper-small_run09.log
+Full output: raw_logs\hf_openai_whisper-small_run10.log
+
+Model: openai/whisper-base
+--------------------------
+Backend: hf
+Repeats: 10
+Successful runs: 10/10
+Exit code: 0
+Transcribe runs (s): 1.48, 1.46, 1.48, 1.47, 1.50, 1.45, 1.48, 1.51, 1.49, 1.47
+Transcribe time: 1.48s
+Transcribe p95: 1.51s
+Transcribe min/max: 1.45s / 1.51s
+Device: GPU:0
+Load time: 2.25s
+Avg CPU% during transcribe: 193.1%
+RAM used by load: 0.145 GiB
+RAM used by transcribe: 0.808 GiB
+VRAM peak: 0.32800817489624023
+GPU util avg/max: 27.0% / 50.0%
+GPU power max: 68.5 W
+GPU memory max (nvidia-smi): 1956 MiB
+Full output: raw_logs\hf_openai_whisper-base_run01.log
+Full output: raw_logs\hf_openai_whisper-base_run02.log
+Full output: raw_logs\hf_openai_whisper-base_run03.log
+Full output: raw_logs\hf_openai_whisper-base_run04.log
+Full output: raw_logs\hf_openai_whisper-base_run05.log
+Full output: raw_logs\hf_openai_whisper-base_run06.log
+Full output: raw_logs\hf_openai_whisper-base_run07.log
+Full output: raw_logs\hf_openai_whisper-base_run08.log
+Full output: raw_logs\hf_openai_whisper-base_run09.log
+Full output: raw_logs\hf_openai_whisper-base_run10.log
+
+Model: openai/whisper-medium
+----------------------------
+Backend: hf
+Repeats: 10
+Successful runs: 10/10
+Exit code: 0
+Transcribe runs (s): 5.03, 4.95, 4.94, 4.95, 4.95, 4.96, 4.95, 4.97, 4.98, 4.94
+Transcribe time: 4.95s
+Transcribe p95: 5.01s
+Transcribe min/max: 4.94s / 5.03s
+Device: GPU:0
+Load time: 3.39s
+Avg CPU% during transcribe: 127.7%
+RAM used by load: 0.156 GiB
+RAM used by transcribe: 0.792 GiB
+VRAM peak: 3.185716152191162
+GPU util avg/max: 67.2% / 81.0%
+GPU power max: 118.7 W
+GPU memory max (nvidia-smi): 4947 MiB
+Full output: raw_logs\hf_openai_whisper-medium_run01.log
+Full output: raw_logs\hf_openai_whisper-medium_run02.log
+Full output: raw_logs\hf_openai_whisper-medium_run03.log
+Full output: raw_logs\hf_openai_whisper-medium_run04.log
+Full output: raw_logs\hf_openai_whisper-medium_run05.log
+Full output: raw_logs\hf_openai_whisper-medium_run06.log
+Full output: raw_logs\hf_openai_whisper-medium_run07.log
+Full output: raw_logs\hf_openai_whisper-medium_run08.log
+Full output: raw_logs\hf_openai_whisper-medium_run09.log
+Full output: raw_logs\hf_openai_whisper-medium_run10.log
+
+Model: openai/whisper-large
+---------------------------
+Backend: hf
+Repeats: 10
+Successful runs: 10/10
+Exit code: 0
+Transcribe runs (s): 5.41, 5.63, 5.81, 5.86, 5.39, 5.38, 5.38, 5.42, 5.41, 5.38
+Transcribe time: 5.41s
+Transcribe p95: 5.84s
+Transcribe min/max: 5.38s / 5.86s
+Device: GPU:0
+Load time: 4.47s
+Avg CPU% during transcribe: 125.2%
+RAM used by load: 0.161 GiB
+RAM used by transcribe: 0.787 GiB
+VRAM peak: 6.391043186187744
+GPU util avg/max: 72.5% / 92.5%
+GPU power max: 137.9 W
+GPU memory max (nvidia-smi): 8466 MiB
+Full output: raw_logs\hf_openai_whisper-large_run01.log
+Full output: raw_logs\hf_openai_whisper-large_run02.log
+Full output: raw_logs\hf_openai_whisper-large_run03.log
+Full output: raw_logs\hf_openai_whisper-large_run04.log
+Full output: raw_logs\hf_openai_whisper-large_run05.log
+Full output: raw_logs\hf_openai_whisper-large_run06.log
+Full output: raw_logs\hf_openai_whisper-large_run07.log
+Full output: raw_logs\hf_openai_whisper-large_run08.log
+Full output: raw_logs\hf_openai_whisper-large_run09.log
+Full output: raw_logs\hf_openai_whisper-large_run10.log
+
+Model: NbAiLab/nb-whisper-tiny
+------------------------------
+Backend: hf
+Repeats: 10
+Successful runs: 10/10
+Exit code: 0
+Transcribe runs (s): 1.48, 1.50, 1.47, 1.50, 1.49, 1.46, 1.46, 1.45, 1.51, 1.48
+Transcribe time: 1.48s
+Transcribe p95: 1.51s
+Transcribe min/max: 1.45s / 1.51s
+Device: GPU:0
+Load time: 1.93s
+Avg CPU% during transcribe: 192.7%
+RAM used by load: 0.143 GiB
+RAM used by transcribe: 0.828 GiB
+VRAM peak: 0.18008136749267578
+GPU util avg/max: 24.3% / 43.0%
+GPU power max: 59.0 W
+GPU memory max (nvidia-smi): 1818 MiB
+Full output: raw_logs\hf_NbAiLab_nb-whisper-tiny_run01.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-tiny_run02.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-tiny_run03.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-tiny_run04.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-tiny_run05.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-tiny_run06.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-tiny_run07.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-tiny_run08.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-tiny_run09.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-tiny_run10.log
+
+Model: NbAiLab/nb-whisper-small
+-------------------------------
+Backend: hf
+Repeats: 10
+Successful runs: 10/10
+Exit code: 0
+Transcribe runs (s): 2.38, 2.32, 2.32, 2.30, 2.29, 2.29, 2.33, 2.32, 2.30, 2.32
+Transcribe time: 2.32s
+Transcribe p95: 2.36s
+Transcribe min/max: 2.29s / 2.38s
+Device: GPU:0
+Load time: 2.63s
+Avg CPU% during transcribe: 159.9%
+RAM used by load: 0.150 GiB
+RAM used by transcribe: 0.796 GiB
+VRAM peak: 1.0334835052490234
+GPU util avg/max: 44.0% / 64.5%
+GPU power max: 88.9 W
+GPU memory max (nvidia-smi): 2765 MiB
+Full output: raw_logs\hf_NbAiLab_nb-whisper-small_run01.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-small_run02.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-small_run03.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-small_run04.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-small_run05.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-small_run06.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-small_run07.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-small_run08.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-small_run09.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-small_run10.log
+
+Model: NbAiLab/nb-whisper-base
+------------------------------
+Backend: hf
+Repeats: 10
+Successful runs: 10/10
+Exit code: 0
+Transcribe runs (s): 1.51, 1.50, 1.47, 1.46, 1.52, 1.48, 1.49, 1.48, 1.52, 1.51
+Transcribe time: 1.50s
+Transcribe p95: 1.52s
+Transcribe min/max: 1.46s / 1.52s
+Device: GPU:0
+Load time: 2.23s
+Avg CPU% during transcribe: 190.6%
+RAM used by load: 0.145 GiB
+RAM used by transcribe: 0.802 GiB
+VRAM peak: 0.3285665512084961
+GPU util avg/max: 24.6% / 50.0%
+GPU power max: 67.1 W
+GPU memory max (nvidia-smi): 1956 MiB
+Full output: raw_logs\hf_NbAiLab_nb-whisper-base_run01.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-base_run02.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-base_run03.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-base_run04.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-base_run05.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-base_run06.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-base_run07.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-base_run08.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-base_run09.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-base_run10.log
+
+Model: NbAiLab/nb-whisper-medium
+--------------------------------
+Backend: hf
+Repeats: 10
+Successful runs: 10/10
+Exit code: 0
+Transcribe runs (s): 3.66, 3.68, 3.60, 3.62, 3.63, 3.63, 3.63, 3.67, 3.63, 3.63
+Transcribe time: 3.63s
+Transcribe p95: 3.68s
+Transcribe min/max: 3.60s / 3.68s
+Device: GPU:0
+Load time: 3.10s
+Avg CPU% during transcribe: 137.6%
+RAM used by load: 0.155 GiB
+RAM used by transcribe: 0.792 GiB
+VRAM peak: 3.1644773483276367
+GPU util avg/max: 62.2% / 81.5%
+GPU power max: 117.5 W
+GPU memory max (nvidia-smi): 4921 MiB
+Full output: raw_logs\hf_NbAiLab_nb-whisper-medium_run01.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-medium_run02.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-medium_run03.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-medium_run04.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-medium_run05.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-medium_run06.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-medium_run07.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-medium_run08.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-medium_run09.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-medium_run10.log
+
+Model: NbAiLab/nb-whisper-large
+-------------------------------
+Backend: hf
+Repeats: 10
+Successful runs: 10/10
+Exit code: 0
+Transcribe runs (s): 4.56, 4.53, 4.51, 4.50, 4.52, 4.51, 4.51, 4.50, 4.49, 4.52
+Transcribe time: 4.51s
+Transcribe p95: 4.55s
+Transcribe min/max: 4.49s / 4.56s
+Device: GPU:0
+Load time: 4.19s
+Avg CPU% during transcribe: 130.5%
+RAM used by load: 0.161 GiB
+RAM used by transcribe: 0.792 GiB
+VRAM peak: 6.390093803405762
+GPU util avg/max: 70.2% / 85.0%
+GPU power max: 136.7 W
+GPU memory max (nvidia-smi): 8516 MiB
+Full output: raw_logs\hf_NbAiLab_nb-whisper-large_run01.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-large_run02.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-large_run03.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-large_run04.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-large_run05.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-large_run06.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-large_run07.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-large_run08.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-large_run09.log
+Full output: raw_logs\hf_NbAiLab_nb-whisper-large_run10.log
+
+
+Backend: faster
+---------------
+
+Model: tiny
+-----------
+Backend: faster
+Repeats: 10
+Successful runs: 0/10
+Exit code: 3221226505
+No performance lines detected.
+Full output: raw_logs\faster_tiny_run01.log
+Full output: raw_logs\faster_tiny_run02.log
+Full output: raw_logs\faster_tiny_run03.log
+Full output: raw_logs\faster_tiny_run04.log
+Full output: raw_logs\faster_tiny_run05.log
+Full output: raw_logs\faster_tiny_run06.log
+Full output: raw_logs\faster_tiny_run07.log
+Full output: raw_logs\faster_tiny_run08.log
+Full output: raw_logs\faster_tiny_run09.log
+Full output: raw_logs\faster_tiny_run10.log
+
+Model: small
+------------
+Backend: faster
+Repeats: 10
+Successful runs: 10/10
+Exit code: 0
+Transcribe runs (s): 1.19, 1.19, 1.17, 1.18, 1.18, 1.22, 1.17, 1.21, 1.18, 1.19
+Transcribe time: 1.19s
+Transcribe p95: 1.22s
+Transcribe min/max: 1.17s / 1.22s
+Device: GPU:0
+Compute type: float16
+Load time: 0.82s
+Avg CPU% during transcribe: 101.6%
+RAM used by load: 0.134 GiB
+RAM used by transcribe: 0.385 GiB
+VRAM peak: 2.2080078125
+GPU util avg/max: 21.1% / 51.0%
+GPU power max: 64.0 W
+GPU memory max (nvidia-smi): 2261 MiB
+Full output: raw_logs\faster_small_run01.log
+Full output: raw_logs\faster_small_run02.log
+Full output: raw_logs\faster_small_run03.log
+Full output: raw_logs\faster_small_run04.log
+Full output: raw_logs\faster_small_run05.log
+Full output: raw_logs\faster_small_run06.log
+Full output: raw_logs\faster_small_run07.log
+Full output: raw_logs\faster_small_run08.log
+Full output: raw_logs\faster_small_run09.log
+Full output: raw_logs\faster_small_run10.log
+
+Model: base
+-----------
+Backend: faster
+Repeats: 10
+Successful runs: 10/10
+Exit code: 0
+Transcribe runs (s): 0.69, 0.68, 0.68, 0.69, 0.69, 0.68, 0.70, 0.68, 0.69, 0.69
+Transcribe time: 0.69s
+Transcribe p95: 0.70s
+Transcribe min/max: 0.68s / 0.70s
+Device: GPU:0
+Compute type: float16
+Load time: 0.56s
+Avg CPU% during transcribe: 100.3%
+RAM used by load: 0.133 GiB
+RAM used by transcribe: 0.347 GiB
+VRAM peak: 1.7529296875
+GPU util avg/max: 5.8% / 7.0%
+GPU power max: 33.5 W
+GPU memory max (nvidia-smi): 1795 MiB
+Full output: raw_logs\faster_base_run01.log
+Full output: raw_logs\faster_base_run02.log
+Full output: raw_logs\faster_base_run03.log
+Full output: raw_logs\faster_base_run04.log
+Full output: raw_logs\faster_base_run05.log
+Full output: raw_logs\faster_base_run06.log
+Full output: raw_logs\faster_base_run07.log
+Full output: raw_logs\faster_base_run08.log
+Full output: raw_logs\faster_base_run09.log
+Full output: raw_logs\faster_base_run10.log
+
+Model: medium
+-------------
+Backend: faster
+Repeats: 10
+Successful runs: 10/10
+Exit code: 0
+Transcribe runs (s): 1.92, 1.92, 1.93, 1.92, 1.90, 1.90, 1.90, 1.91, 1.90, 1.91
+Transcribe time: 1.91s
+Transcribe p95: 1.93s
+Transcribe min/max: 1.90s / 1.93s
+Device: GPU:0
+Compute type: float16
+Load time: 1.41s
+Avg CPU% during transcribe: 100.4%
+RAM used by load: 0.134 GiB
+RAM used by transcribe: 0.347 GiB
+VRAM peak: 3.6171875
+GPU util avg/max: 42.6% / 60.0%
+GPU power max: 120.7 W
+GPU memory max (nvidia-smi): 3704 MiB
+Full output: raw_logs\faster_medium_run01.log
+Full output: raw_logs\faster_medium_run02.log
+Full output: raw_logs\faster_medium_run03.log
+Full output: raw_logs\faster_medium_run04.log
+Full output: raw_logs\faster_medium_run05.log
+Full output: raw_logs\faster_medium_run06.log
+Full output: raw_logs\faster_medium_run07.log
+Full output: raw_logs\faster_medium_run08.log
+Full output: raw_logs\faster_medium_run09.log
+Full output: raw_logs\faster_medium_run10.log
+
+Model: large-v3
+---------------
+Backend: faster
+Repeats: 10
+Successful runs: 10/10
+Exit code: 0
+Transcribe runs (s): 2.46, 2.45, 2.46, 2.46, 2.47, 2.50, 2.48, 2.45, 2.46, 2.47
+Transcribe time: 2.46s
+Transcribe p95: 2.49s
+Transcribe min/max: 2.45s / 2.50s
+Device: GPU:0
+Compute type: float16
+Load time: 2.42s
+Avg CPU% during transcribe: 100.2%
+RAM used by load: 0.135 GiB
+RAM used by transcribe: 0.345 GiB
+VRAM peak: 5.5537109375
+GPU util avg/max: 57.8% / 71.0%
+GPU power max: 146.9 W
+GPU memory max (nvidia-smi): 5687 MiB
+Full output: raw_logs\faster_large-v3_run01.log
+Full output: raw_logs\faster_large-v3_run02.log
+Full output: raw_logs\faster_large-v3_run03.log
+Full output: raw_logs\faster_large-v3_run04.log
+Full output: raw_logs\faster_large-v3_run05.log
+Full output: raw_logs\faster_large-v3_run06.log
+Full output: raw_logs\faster_large-v3_run07.log
+Full output: raw_logs\faster_large-v3_run08.log
+Full output: raw_logs\faster_large-v3_run09.log
+Full output: raw_logs\faster_large-v3_run10.log
+
+

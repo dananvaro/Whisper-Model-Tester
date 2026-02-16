@@ -1,0 +1,14 @@
+
+Model: large-v3
+Device: GPU:0
+Compute type: float16
+Load time: 2.41s
+Transcribe time: 2.48s
+Avg CPU% during transcribe: 100.0%
+RAM used by load: 0.135 GiB
+RAM used by transcribe: 0.346 GiB
+VRAM peak: 5.5546875
+GPU util avg/max: 69.7% / 87.0%
+GPU power max: 152.0 W
+GPU memory max (nvidia-smi): 5688 MiB
+Text: Nordmenn er nordlendinger, trøndere, sørlendinger og folk fra alle andre regioner. Nordmenn er også innvandret fra Afghanistan, Pakistan og Polen, Sverige, Somalia og Syria. Det er ikke alltid så lett å si hvor vi er fra. Hvilken nasjonalitet vi tilhører. Det vi kaller hjem er der hjertet vårt er. Og det kan ikke alltid plasseres innenfor landegrenser. Nordmenn er jenter som er glad i jenter, gutter som er glad i gutter og jenter og gutter som er glad i hverandre. Nordmenn tror på Gud, Allah, altet og ingenting. Nordmenn er ikke nødvendige. Nordmenn liker Grieg, Hugo, Helbilis og Kari Bremnes. Med andre ord, Norge er dere. Norge er oss. Mitt største håp for Norge er at vi skal klare å ta vare på hverandre. At vi skal bygge dette landet videre på tillid, fellesskap og raushet.

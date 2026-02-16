@@ -1,0 +1,14 @@
+
+Model: base
+Device: GPU:0
+Compute type: float16
+Load time: 0.51s
+Transcribe time: 0.68s
+Avg CPU% during transcribe: 100.4%
+RAM used by load: 0.133 GiB
+RAM used by transcribe: 0.348 GiB
+VRAM peak: 1.7666015625
+GPU util avg/max: 0.0% / 0.0%
+GPU power max: 30.1 W
+GPU memory max (nvidia-smi): 1809 MiB
+Text: Normen er noen lenger, trøndere, sølengenger og folk fra alle andre regioner. Normen er også innvader fra Afghanistan, Pakistan og Polen, Sverige, Somalia og Sydia. Der er ikke alt det så lett å si hvor vi er fra, vilke nationalitet vi tilhører. Det vi kaller hjem er der hjertet vårt er, og det kan ikke alltid placeres inn for landegrenset. Normen er jænter som jeg glæ i jænter, gøttet som jeg glæ i gøttet og jæntet og gøttet som jeg glæ i varandre. Normen tog et på god, alla altet og ingenting. Normen liker grig, syg og helbilis og kadibremmeres. Må andre orger er dere, norger er oss. Myt største hob for dårger er at vi skal klare og ta varre på hver andre. At vi skal bygget etter landegvider på tillid, fylleskap og røyset.

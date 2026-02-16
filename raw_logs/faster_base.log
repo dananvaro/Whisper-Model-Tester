@@ -1,0 +1,17 @@
+C:\Users\Tarek\Downloads\danantest\Whisper-Model-Tester\.venv\Lib\site-packages\huggingface_hub\file_download.py:130: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\Tarek\.cache\huggingface\hub\models--Systran--faster-whisper-base. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+
+Model: base
+Device: GPU:0
+Compute type: float16
+Load time: 6.65s
+Transcribe time: 0.74s
+Avg CPU% during transcribe: 104.1%
+RAM used by load: 0.157 GiB
+RAM used by transcribe: 0.348 GiB
+VRAM peak: 1.68359375
+GPU util avg/max: 20.3% / 47.0%
+GPU power max: 41.0 W
+GPU memory max (nvidia-smi): 1724 MiB
+Text: Normen er noen lenger, trøndere, sølengenger og folk fra alle andre regioner. Normen er også innvader fra Afghanistan, Pakistan og Polen, Sverige, Somalia og Sydia. Der er ikke alt det så lett å si hvor vi er fra, vilke nationalitet vi tilhører. Det vi kaller hjem er der hjertet vårt er, og det kan ikke alltid placeres inn for landegrenset. Normen er jænter som jeg glæ i jænter, gøttet som jeg glæ i gøttet og jæntet og gøttet som jeg glæ i varandre. Normen tog et på god, alla altet og ingenting. Normen liker grig, syg og helbilis og kadibremmeres. Må andre orger er dere, norger er oss. Myt største hob for dårger er at vi skal klare og ta varre på hver andre. At vi skal bygget etter landegvider på tillid, fylleskap og røyset.

@@ -1,0 +1,17 @@
+C:\Users\Tarek\Downloads\danantest\Whisper-Model-Tester\.venv\Lib\site-packages\huggingface_hub\file_download.py:130: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\Tarek\.cache\huggingface\hub\models--Systran--faster-whisper-small. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+
+Model: small
+Device: GPU:0
+Compute type: float16
+Load time: 17.79s
+Transcribe time: 1.29s
+Avg CPU% during transcribe: 93.4%
+RAM used by load: 0.158 GiB
+RAM used by transcribe: 0.383 GiB
+VRAM peak: 2.1123046875
+GPU util avg/max: 32.3% / 58.0%
+GPU power max: 67.9 W
+GPU memory max (nvidia-smi): 2163 MiB
+Text: Norman er nordlænninger, trøndere, sølænninger og folk fra alle andre regioner. Norman er også innvandret fra Afghanistan, Pakistan og Polen, Sverige, Somalia og Syria. Norman er en ganske, som er glad i ganske, gutter som er glad i gutter, og det er en ganske, som er glad i gutter. Det er ikke alt så lett å si hvor vi er fra, hvilken nasjonalitet vi tilhører. Det vi kaller hjem er det hjertebordet er, og det kan ikke alltid plasseres innfor landegrenser. Norman er jenter som er glad i jenter, gutter som er glad i gutter, og jenter og gutter som er glad i hverandre. Norman tommer på Gud, Allah, Altet og ingenting. Norman liker Grig, Kygo, Helbylis og Karjebremnes. Norge er dere. Norge er oss. Mitt største håp for Norge er at vi skal klare å ta vare på hverandre, at vi skal bygge dette landet videre på tillid, fjellesskap og reuset.
